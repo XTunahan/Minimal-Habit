@@ -1,0 +1,3 @@
+// Placeholder Release configuration; wire up in Xcode
+PRODUCT_NAME = MinimalHabit
+
