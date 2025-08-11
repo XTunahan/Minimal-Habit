@@ -21,9 +21,12 @@
 		10000000100000000000000C /* QRCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000100000000000000C /* QRCodeService.swift */; };
 		10000000100000000000000D /* ShareImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000100000000000000D /* ShareImageRenderer.swift */; };
 		10000000100000000000000E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20000000100000000000000E /* Assets.xcassets */; };
+ 		400000001000000000000004 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000001000000000000001 /* PersistenceController.swift */; };
+ 		400000001000000000000005 /* CoreDataHabitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400000001000000000000002 /* CoreDataHabitRepository.swift */; };
+        400000001000000000000006 /* MinimalHabit.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 400000001000000000000003 /* MinimalHabit.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXFileReference section */
+		/* Begin PBXFileReference section */
 		200000001000000000000001 /* MinimalHabitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalHabitApp.swift; sourceTree = "<group>"; };
 		200000001000000000000002 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		200000001000000000000003 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -43,6 +46,17 @@
 		200000001000000000000011 /* MinimalHabit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MinimalHabit.entitlements; sourceTree = "<group>"; };
 		200000001000000000000012 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		200000001000000000000013 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+ 		400000001000000000000001 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+ 		400000001000000000000002 /* CoreDataHabitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHabitRepository.swift; sourceTree = "<group>"; };
+		400000001000000000000003 /* MinimalHabit.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = MinimalHabit.xcdatamodeld; sourceTree = "<group>"; };
+		500000001000000000000011 /* HabitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewModel.swift; sourceTree = "<group>"; };
+		500000001000000000000012 /* HabitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewModel.swift; sourceTree = "<group>"; };
+		500000001000000000000013 /* EditHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitViewModel.swift; sourceTree = "<group>"; };
+		500000001000000000000014 /* HabitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRowView.swift; sourceTree = "<group>"; };
+		500000001000000000000015 /* EditHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitView.swift; sourceTree = "<group>"; };
+		500000001000000000000016 /* StreakCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalendarView.swift; sourceTree = "<group>"; };
+		500000001000000000000017 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		500000001000000000000018 /* DateGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				300000001000000000000012 /* Models */,
+				300000001000000000000015 /* ViewModels */,
 				300000001000000000000013 /* Views */,
 			);
 			path = Habits;
@@ -113,10 +128,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+ 		300000001000000000000015 /* ViewModels */ = {
+ 			isa = PBXGroup;
+ 			children = (
+ 				500000001000000000000011 /* HabitListViewModel.swift */,
+ 				500000001000000000000012 /* HabitDetailViewModel.swift */,
+ 				500000001000000000000013 /* EditHabitViewModel.swift */,
+ 			);
+ 			path = ViewModels;
+ 			sourceTree = "<group>";
+ 		};
 		300000001000000000000013 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				200000001000000000000004 /* HabitListView.swift */,
+				500000001000000000000014 /* HabitRowView.swift */,
+				500000001000000000000016 /* StreakCalendarView.swift */,
+				500000001000000000000017 /* HabitDetailView.swift */,
+				500000001000000000000015 /* EditHabitView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,8 +164,19 @@
 			isa = PBXGroup;
 			children = (
 				200000001000000000000006 /* HabitRepository.swift */,
+				400000001000000000000001 /* PersistenceController.swift */,
+				400000001000000000000002 /* CoreDataHabitRepository.swift */,
+				300000001000000000000070 /* Model */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		300000001000000000000070 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				400000001000000000000003 /* MinimalHabit.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		300000001000000000000022 /* Notifications */ = {
@@ -178,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				200000001000000000000007 /* StreakCalculator.swift */,
+				500000001000000000000018 /* DateGrid.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -270,37 +311,48 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		000000000000000000000013 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				10000000100000000000000E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        000000000000000000000013 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                10000000100000000000000E /* Assets.xcassets in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		000000000000000000000011 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				100000001000000000000001 /* MinimalHabitApp.swift in Sources */,
-				100000001000000000000002 /* AppCoordinator.swift in Sources */,
-				100000001000000000000003 /* AppState.swift in Sources */,
-				100000001000000000000004 /* HabitListView.swift in Sources */,
-				100000001000000000000005 /* Habit.swift in Sources */,
-				100000001000000000000006 /* HabitRepository.swift in Sources */,
-				100000001000000000000007 /* StreakCalculator.swift in Sources */,
-				100000001000000000000008 /* Date+Extensions.swift in Sources */,
-				100000001000000000000009 /* Color+Extensions.swift in Sources */,
-				10000000100000000000000A /* PrimaryButton.swift in Sources */,
-				10000000100000000000000B /* NotificationScheduler.swift in Sources */,
-				10000000100000000000000C /* QRCodeService.swift in Sources */,
-				10000000100000000000000D /* ShareImageRenderer.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        000000000000000000000011 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                100000001000000000000001 /* MinimalHabitApp.swift in Sources */,
+                100000001000000000000002 /* AppCoordinator.swift in Sources */,
+                100000001000000000000003 /* AppState.swift in Sources */,
+                100000001000000000000004 /* HabitListView.swift in Sources */,
+                100000001000000000000005 /* Habit.swift in Sources */,
+                100000001000000000000006 /* HabitRepository.swift in Sources */,
+                400000001000000000000004 /* PersistenceController.swift in Sources */,
+                400000001000000000000005 /* CoreDataHabitRepository.swift in Sources */,
+                500000001000000000000001 /* HabitListViewModel.swift in Sources */,
+                500000001000000000000002 /* HabitDetailViewModel.swift in Sources */,
+                500000001000000000000003 /* EditHabitViewModel.swift in Sources */,
+                500000001000000000000004 /* HabitRowView.swift in Sources */,
+                500000001000000000000005 /* EditHabitView.swift in Sources */,
+                500000001000000000000006 /* StreakCalendarView.swift in Sources */,
+                500000001000000000000007 /* HabitDetailView.swift in Sources */,
+                500000001000000000000008 /* DateGrid.swift in Sources */,
+                
+                100000001000000000000007 /* StreakCalculator.swift in Sources */,
+                100000001000000000000008 /* Date+Extensions.swift in Sources */,
+                100000001000000000000009 /* Color+Extensions.swift in Sources */,
+                10000000100000000000000A /* PrimaryButton.swift in Sources */,
+                10000000100000000000000B /* NotificationScheduler.swift in Sources */,
+                10000000100000000000000C /* QRCodeService.swift in Sources */,
+                10000000100000000000000D /* ShareImageRenderer.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -314,7 +366,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
-				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_FILE = MinimalHabit/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -338,7 +390,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
-				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_FILE = MinimalHabit/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -358,10 +410,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Resources/MinimalHabit.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MinimalHabit/Resources/MinimalHabit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKYBWDFQNS;
-				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_FILE = MinimalHabit/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,10 +432,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Resources/MinimalHabit.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MinimalHabit/Resources/MinimalHabit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UKYBWDFQNS;
-				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_FILE = MinimalHabit/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
